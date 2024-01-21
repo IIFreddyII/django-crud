@@ -1,6 +1,14 @@
 # Django base stuff
 Django==5.0.1
 
+# DRF
+djangorestframework==3.14.0
+djangorestframework-simplejwt==5.3.1
+django-coreapi==2.3.0
+
+# Django Tools
+django-filter==23.5
+
 # Environ
 django-environ==0.11.2
 
