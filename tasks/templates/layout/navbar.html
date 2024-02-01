@@ -30,22 +30,22 @@
                     <a href="/web" class="nav-link">Inicio</a>
                 </li>
                 {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a href="" class="nav-link">Mis Tareas</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link">Nueva Tarea</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/web/logout" class="nav-link">Salir</a>
-                </li>
+                    <li class="nav-item">
+                        <a href="/web" class="nav-link">Mis Tareas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'task_create' %}" class="nav-link">Nueva Tarea</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/web/logout" class="nav-link">Salir</a>
+                    </li>
                 {% else %}
-                <li class="nav-item">
-                    <a href="/web/login" class="nav-link">Ingresar</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/web/signup" class="nav-link">Registrarme</a>
-                </li>
+                    <li class="nav-item">
+                        <a href="/web/login" class="nav-link">Ingresar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/web/signup" class="nav-link">Registrarme</a>
+                    </li>
                 {% endif %}
             </ul>
         </div>

@@ -18,3 +18,8 @@ class TaskSerializer(serializers.ModelSerializer):
             "email",
             "due_date",
         ]
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        data["author"] = UserSerializer(instance.author).data
+        return data

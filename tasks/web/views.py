@@ -15,9 +15,12 @@ class BaseView(View):
     success_url = reverse_lazy("task_list")
 
 
-class TaskListView(BaseView, ListView):
+class TaskListView(BaseView, ListView, ):
     template_name = "index.html"
     context_object_name = "tasks"
+
+    def get_queryset(self):
+        return Task.objects.filter(author=self.request.user)
 
 
 class TaskDetailView(BaseView, DetailView):

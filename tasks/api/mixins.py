@@ -13,3 +13,13 @@ class TaskMixin(BaseMixin):
         """
 
         serializer.save(author=self.user)
+
+    def get_queryset(self):
+        """
+        Get all objects
+        """
+
+        if self.queryset:
+            return self.queryset
+
+        return self.model.objects.filter(author=self.user)
