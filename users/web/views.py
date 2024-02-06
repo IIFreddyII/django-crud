@@ -1,6 +1,6 @@
+from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect, render
-from django.contrib import messages
 
 from .forms import LoginForm, SignupForm
 
@@ -47,3 +47,7 @@ def user_logout(request):
     """
     logout(request)
     return redirect("login")
+
+
+def user_detail(request):
+    return render(request, 'profile.html', {'user': request.user})

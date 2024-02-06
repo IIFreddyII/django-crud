@@ -1,0 +1,20 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+    <div class="container">
+        <div class="row" style="text-align: center;">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h4>Perfil de usuario</h4></div>
+                <div class="panel-body">
+                    <div class="">
+                        <div class="card container mt-3 mb-3 p-3">
+                            <h2>{{ user.name }}</h2>
+                            <p>{{ user.email }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
